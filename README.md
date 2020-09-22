@@ -1,2 +1,2 @@
 # TOKB-School-articles
-a database for reference materials for school students and teachers to use.
+This GitHub repo contains all the queries that would be used in the MongoDB DBMS.
