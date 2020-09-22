@@ -1,0 +1,26 @@
+// Tutor query for inserting document into articles collection
+
+db.articles.insert({ 
+    type: "", 
+    category: "", 
+    name: "", 
+    born: "", 
+    died: "", 
+    nationality: "",
+    knownFor: "",
+    notableWork: "",
+    about: "",
+    year: "",
+    medium: "",
+    dimensions: "",
+    location: "",
+    designed: "",
+    developer: ""
+    });
+
+// Tutor query for updating document in the article collection
+
+db.articles.updateOne(
+    { _id : "" },
+    { $set: { "" : "" }} // first "" name of attribute in document, second "" what to be changed to
+);
