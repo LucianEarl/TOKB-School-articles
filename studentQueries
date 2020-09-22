@@ -4,8 +4,20 @@ db.collection.find(
     { $filter : { category : { $eq : "" } } }
 );
 
+// Example for find all articles in the Arts category
+
+db.collection.find(
+    { $filter : { category : { $eq : "Arts" } } }
+);
+
 // Student query to find the articles with a Key word in the articles name
 
 db.collection.find(
     { $text : { name : { $search : "" } } }
+);
+
+// Example to find the Mona Lisa article using only the key word Lisa
+
+db.collection.find(
+    { $text : { name : { $search : "Lisa" } } }
 );
