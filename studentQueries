@@ -1,1 +1,3 @@
-{ $filter : { category : { $eq : "" } } };
+db.collection.find(
+    { $filter : { category : { $eq : "" } } }
+);
