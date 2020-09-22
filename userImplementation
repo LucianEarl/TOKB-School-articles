@@ -55,4 +55,12 @@ db.createUser(
    }
 );
 
+// to enable the mongo server to authenticate users, go to /etc/mongod.conf and change the following line so it says:
+// security:
+//    authoriztion: "enabled"
 
+// then once connected, use the following command to login
+db.auth (user, pwd)
+
+// example user login
+db.auth("JohnnyAdmin","admin123")
