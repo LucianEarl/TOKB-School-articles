@@ -7,5 +7,5 @@ db.collection.find(
 // Student query to find the articles with a Key word in the articles name
 
 db.collection.find(
-    { $filter : { name : { $eq : "" } } }
+    { $text : { name : { $search : "" } } }
 );
