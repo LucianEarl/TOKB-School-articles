@@ -6,7 +6,7 @@ db.collection.find(
 
 // Example for find all articles in the Arts category
 
-db.collection.find(
+db.articles.find(
     { $filter : { category : { $eq : "Arts" } } }
 );
 
@@ -18,6 +18,6 @@ db.collection.find(
 
 // Example to find the Mona Lisa article using only the key word Lisa
 
-db.collection.find(
+db.articles.find(
     { $text : { name : { $search : "Lisa" } } }
 );

@@ -1,0 +1,58 @@
+// create the student role
+use admin
+db.createRole(
+   {
+     role: "student",
+     privileges: [
+       { resource: { db: "", collection: "articles" }, actions: [ "find" ] }
+     ],
+);
+
+// create a student user
+db.createUser(
+   {
+      user: "hannahWyoming",
+      pwd: passwordPrompt(),
+      roles: ["student"]
+   }
+);
+
+// create the tutor role
+use admin
+db.createRole(
+   {
+     role: "tutor",
+     privileges: [
+       { resource: { db: "", collection: "articles" }, actions: [ "find", "update", "insert" ] }
+     ],
+);
+
+// create a tutor user
+db.createUser(
+   {
+      user: "bobMcgeal",
+      pwd: passwordPrompt(),
+      roles: ["tutor"]
+   }
+);
+
+// create the admin role
+use admin
+db.createRole(
+   {
+     role: "administrator",
+     privileges: [
+       { resource: { db: "", collection: "articles" }, actions: [ "find", "update", "insert", "delete" ] }
+     ],
+);
+
+// create an administrator user
+db.createUser(
+   {
+      user: "JohnnyAdmin",
+      pwd: passwordPrompt(),
+      roles: ["admin"]
+   }
+);
+
+
