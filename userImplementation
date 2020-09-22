@@ -1,0 +1,29 @@
+// create the student role
+use admin
+db.createRole(
+   {
+     role: "student",
+     privileges: [
+       { resource: { db: "", collection: "articles" }, actions: [ "find" ] }
+     ],
+);
+
+// create the tutor role
+use admin
+db.createRole(
+   {
+     role: "tutor",
+     privileges: [
+       { resource: { db: "", collection: "articles" }, actions: [ "find", "update", "insert" ] }
+     ],
+);
+
+// create the admin role
+use admin
+db.createRole(
+   {
+     role: "administrator",
+     privileges: [
+       { resource: { db: "", collection: "articles" }, actions: [ "find", "update", "insert", "delete" ] }
+     ],
+);
