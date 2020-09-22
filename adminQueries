@@ -1,0 +1,58 @@
+// Admin query for inserting document into articles collection
+
+db.articles.insert({ 
+    type: "", 
+    category: "", 
+    name: "", 
+    born: "", 
+    died: "", 
+    nationality: "",
+    knownFor: "",
+    notableWork: "",
+    about: "",
+    year: "",
+    medium: "",
+    dimensions: "",
+    location: "",
+    designed: "",
+    developer: ""
+    });
+
+// Example of a Admin inserting a new document
+
+db.articles.insert({ 
+    type: "Painting", 
+    category: "Art", 
+    name: "A Dog", 
+    year: "2020",
+    medium: "Print out",
+    dimensions: "16cm x 14cm",
+    location: "Arts Museum, Italy",
+    });
+
+
+// Admin query for updating document in the article collection
+
+db.articles.updateOne(
+    { _id : "" },
+    { $set: { "" : "" }} // first "" name of attribute in document, second "" what to be changed to
+);
+
+// Example of a admin modifying a collection
+
+db.articles.updateOne(
+    { _id : "5f694c669df64815580ab0b4" },
+    { $set: { "location" : "The London Gallery, England" }}
+);
+
+// Admin query to remove an document from the article collection
+
+db.articles.remove(
+    { _id : "" }   
+);
+
+// Example of admin removing a document from the article collection
+
+db.articles.remove(
+    { _id : "5f694c669df64815580ab0b4" }    
+);
