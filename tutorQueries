@@ -18,9 +18,29 @@ db.articles.insert({
     developer: ""
     });
 
+// Example of a tutor inserting a new document
+
+db.articles.insert({ 
+    type: "Painting", 
+    category: "Art", 
+    name: "A mailman", 
+    year: "2020",
+    medium: "Print out",
+    dimensions: "3m x 4x",
+    location: "The Museum of Museums, Argentina",
+    });
+
+
 // Tutor query for updating document in the article collection
 
 db.articles.updateOne(
     { _id : "" },
     { $set: { "" : "" }} // first "" name of attribute in document, second "" what to be changed to
+);
+
+// Example of a tutor modifying a collection
+
+db.articles.updateOne(
+    { _id : "5f694c669df64815580ab0b4" },
+    { $set: { "location" : "Auckland Museum, New Zealand" }}
 );
